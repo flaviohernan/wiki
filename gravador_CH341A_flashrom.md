@@ -1,5 +1,12 @@
 # Guia rápido de uso do software flashrom
 
+## Intalação do flashrom
+### Linux
+
+```console
+sudo apt-get install flashrom
+```
+
 ## Uso do flashrom
 
 ### Linux
