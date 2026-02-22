@@ -40,7 +40,7 @@ dd if=smaller_image.bin of=full_image.bin conv=notrunc bs=1
 
 ```console
 flashrom -p <programmer> -w full_image.bin
-``
+```
 
 ## Referencias
 ### https://flashrom.org/supported_hw/supported_prog/ch341ab.html
