@@ -13,3 +13,4 @@ Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original us
 ### https://github.com/Intika-Linux-Router/U-Boot-R-MoD/tree/master
 ### https://github.com/pepe2k/u-boot_mod/tree/master/original_u-boot_images
 ### https://openwrt.org/toh/mercury/mw150r
+### https://openwrt.org/toh/tp-link/tl-wr740n
