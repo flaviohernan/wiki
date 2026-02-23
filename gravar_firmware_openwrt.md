@@ -1,5 +1,6 @@
 # Tutorial para gravar firmware por TFTP
-Será usado o rotreador TL-WR720N
+Será usado o rotreador TL-WR720N CPU Atheros AR9331-AL3A
+
 Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original usar 16MB e 2MB.
 
 ## Referência
