@@ -5,6 +5,9 @@ Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original us
 
 ## Referência
 ### https://openwrt.org/toh/tp-link/tl-wr720n
+### https://openwrt.org/toh/arduino.cc/yun
+### https://docs.arduino.cc/tutorials/yun-rev2/yun-sys-upgrade/
+### https://docs.arduino.cc/tutorials/yun-rev2/yun-u-boot-reflash/
 ### https://openwrt.org/toh/tp-link/tl-wr1043nd
 ### https://openwrt.org/toh/tp-link/tl-wr941nd
 
