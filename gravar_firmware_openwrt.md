@@ -33,3 +33,11 @@ sudo apt install dhex
 ### https://github.com/pepe2k/u-boot_mod/tree/master/original_u-boot_images
 ### https://openwrt.org/toh/mercury/mw150r
 ### https://openwrt.org/toh/tp-link/tl-wr740n
+### https://cavefxa.com/posts/router-hacking0/
+### https://cavefxa.com/posts/router-hacking1/
+### https://cavefxa.com/posts/router-hacking2/
+###
+###
+###
+###
+###
