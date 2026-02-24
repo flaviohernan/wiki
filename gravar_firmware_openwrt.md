@@ -14,7 +14,7 @@ sudo netdiscover -S -f -i enp9s0
 
 sudo apt install dhex
 
-``
+```
 
 ## Referência
 ### https://openwrt.org/toh/tp-link/tl-wr720n
