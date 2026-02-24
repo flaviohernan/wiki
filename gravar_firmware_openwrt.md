@@ -37,7 +37,7 @@ sudo apt install dhex
 ### https://cavefxa.com/posts/router-hacking1/
 ### https://cavefxa.com/posts/router-hacking2/
 ### https://github.com/jyy5206/TP-link-WR720N-16M-Flush-Firmware
-###
+### http://ftp.ufanet.ru/pub/firmware/Tp-Link/TL-WR720N/V2/
 ###
 ###
 ###
