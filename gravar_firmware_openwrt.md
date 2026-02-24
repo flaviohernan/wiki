@@ -4,17 +4,23 @@ Será usado o rotreador TL-WR720N CPU Atheros AR9331-AL3A
 Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original usar 16MB e 2MB.
 
 ## Comandos
- ```console
+```console
 sudo netdiscover -S -f -i enp9s0
-
-  sudo apt install tftp-hpa
-  sudo systemctl restart tftpd-hpa
-  sudo ufw allow tftp
-  sudo ufw allow 69/udp
-
-sudo apt install dhex
-
 ```
+
+```console
+sudo apt install tftp-hpa
+sudo systemctl restart tftpd-hpa
+sudo ufw allow tftp
+sudo ufw allow 69/udp
+```
+
+```console
+sudo apt install dhex
+```
+
+
+
 
 ## Referência
 ### https://openwrt.org/toh/tp-link/tl-wr720n
