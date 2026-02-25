@@ -39,5 +39,5 @@ sudo apt install dhex
 ### https://github.com/jyy5206/TP-link-WR720N-16M-Flush-Firmware
 ### http://ftp.ufanet.ru/pub/firmware/Tp-Link/TL-WR720N/V2/
 ### https://openwrt.org/toh/tp-link/tl-wr710n
-###
+### https://openwrt.org/toh/tp-link/tl-wr703n#mb_flash_mod
 ###
