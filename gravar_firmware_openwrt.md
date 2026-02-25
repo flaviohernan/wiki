@@ -21,6 +21,47 @@ sudo apt install dhex
 
 
 
+## Create a working image
+
+In order to replace the 4mb flash chip with a 16mb one you may at first dump two important partitions:
+
+    64k u-boot + 64k data section: at the beginning of the chip. The data section is important as it contains MAC (at 0x1FC00) and PIN (at 0x1FE00) as well as Model information.
+    64k ART partition: which contains wireless voodoo configuration. Without it your wifi won't come up.
+
+After dumping the memory, use dd to extract the second and last block.
+
+```console
+#!/bin/sh
+# new image size
+# block size -> 64k
+bs=65536
+ls -l flash_dump
+# -rw-rw-r-- 1 makefu makefu 4194304 Mar 21 10:28 flash_dump
+flash_size=$(ls -l flash_dump | cut -d\  -f 5)
+#             4194304 / 65536
+num_blocks=$(($flash_size/$bs))
+# 64 blocks, 64kilobyte each
+dd if=flash_dump of=data.bin bs=$bs count=1 skip=1
+dd if=flash_dump of=art.bin bs=$bs count=1 skip=$(($num_blocks-1))
+```
+
+After that you can cat together your new image:
+
+```console
+new_image_size=16777216
+truncate --size $((new_image_size-3*$bs)) whitespace.bin
+ 
+# build pepe2k bootloader at first: see https://github.com/pepe2k/u-boot_mod
+cat uboot_for_tp-link_tl-wr703n.bin \
+    data.bin \
+    whitespace.bin \
+    art.bin > wr703_bootloader_data_whitespace_art.bin
+```
+
+Flash this image with your SPI-programmer on your new chip and solder it in. You can now hold the button for 3 seconds (will blink each second) and release to make the bootloader start a httpd at 192.168.1.1.
+
+
+
 
 ## Referência
 ### https://openwrt.org/toh/tp-link/tl-wr720n
