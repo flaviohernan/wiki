@@ -38,6 +38,9 @@ sudo apt install dhex
 ### https://cavefxa.com/posts/router-hacking2/
 ### https://github.com/jyy5206/TP-link-WR720N-16M-Flush-Firmware
 ### http://ftp.ufanet.ru/pub/firmware/Tp-Link/TL-WR720N/V2/
+
+falado do uboot e ART
+
 ### https://openwrt.org/toh/tp-link/tl-wr710n
 ### https://openwrt.org/toh/tp-link/tl-wr703n#mb_flash_mod
-###
+### https://stackoverflow.com/questions/47025038/the-beginning-and-end-address-of-the-flash-memory
