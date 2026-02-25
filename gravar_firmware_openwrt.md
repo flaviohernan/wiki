@@ -44,3 +44,7 @@ falado do uboot e ART
 ### https://openwrt.org/toh/tp-link/tl-wr710n
 ### https://openwrt.org/toh/tp-link/tl-wr703n#mb_flash_mod
 ### https://stackoverflow.com/questions/47025038/the-beginning-and-end-address-of-the-flash-memory
+### https://github.com/bkil/calibrated-art-collection/tree/master
+### https://openwrt.org/toh/gl.inet/64xx
+### https://github.com/Edragon/openwrt/tree/master/JS9331
+
