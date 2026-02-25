@@ -80,6 +80,7 @@ Flash this image with your SPI-programmer on your new chip and solder it in. You
 ### https://cavefxa.com/posts/router-hacking2/
 ### https://github.com/jyy5206/TP-link-WR720N-16M-Flush-Firmware
 ### http://ftp.ufanet.ru/pub/firmware/Tp-Link/TL-WR720N/V2/
+### https://www.dragino.com/products/mother-board/item/115-ms14n-s.html
 
 falado do uboot e ART
 
