@@ -25,8 +25,9 @@ sudo apt install dhex
 
 In order to replace the 4mb flash chip with a 16mb one you may at first dump two important partitions:
 
-    64k u-boot + 64k data section: at the beginning of the chip. The data section is important as it contains MAC (at 0x1FC00) and PIN (at 0x1FE00) as well as Model information.
-    64k ART partition: which contains wireless voodoo configuration. Without it your wifi won't come up.
+64k u-boot + 64k data section: at the beginning of the chip. The data section is important as it contains 
+MAC (at 0x1FC00) and PIN (at 0x1FE00) as well as Model information.
+64k ART partition: which contains wireless voodoo configuration. Without it your wifi won't come up.
 
 After dumping the memory, use dd to extract the second and last block.
 
