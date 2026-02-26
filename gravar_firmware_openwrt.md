@@ -82,6 +82,10 @@ Flash this image with your SPI-programmer on your new chip and solder it in. You
 ### http://ftp.ufanet.ru/pub/firmware/Tp-Link/TL-WR720N/V2/
 ### https://www.dragino.com/products/mother-board/item/115-ms14n-s.html
 
+sobre TFTP
+
+### https://openwrt.org/docs/guide-user/installation/generic.flashing.tftp.easy-ubuntu
+
 falado do uboot e ART
 
 ### https://openwrt.org/toh/tp-link/tl-wr710n
