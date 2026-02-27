@@ -36,6 +36,12 @@ pode ser feito através dos comandos **dd** ou **truncate**
 
 Usando dd
 
+4096k = 4194304
+
+8192k = 8388608
+
+16384k = 16777216
+
 ```console
 # First, get the size of the flash chip (e.g., 256KB = 262144 bytes)
 # Pad the image file to the full size of the chip
