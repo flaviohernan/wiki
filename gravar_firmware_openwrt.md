@@ -4,6 +4,65 @@ Será usado o rotreador TL-WR720N CPU Atheros AR9331-AL3A
 Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original usar 16MB e 2MB.
 
 ---
+
+TFTP Server Install and Setup
+
+    Install the following packages.
+
+     sudo apt-get install xinetd tftpd tftp
+
+    Create /etc/xinetd.d/tftp and put this entry:
+
+     service tftp
+     {
+     protocol        = udp
+     port            = 69
+     socket_type     = dgram
+     wait            = yes
+     user            = nobody
+     server          = /usr/sbin/in.tftpd
+     server_args     = /tftpboot
+     disable         = no
+     }
+
+    Create a folder /tftpboot this should match whatever you gave in server_args. mostly it will be tftpboot.
+
+     sudo mkdir /tftpboot
+     sudo chmod -R 777 /tftpboot
+     sudo chown -R nobody /tftpboot
+
+    Restart the xinetd service.
+
+    newer systems:
+
+     sudo service xinetd restart
+
+    older systems:
+
+     sudo /etc/init.d/xinetd restart
+
+Now our TFTP server is up and running.
+Testing our TFTP server
+
+    Create a file named test with some content in /tftpboot path of the TFTP server
+
+    Obtain the IP address of the TFTP server using ifconfig command
+
+    Now in some other system follow the following steps.
+
+     tftp 192.168.1.2
+     tftp> get test
+     Sent 159 bytes in 0.0 seconds
+
+     tftp> quit
+
+     cat test
+
+
+
+---
+
+---
 The Qualcomm Atheros AR9331 SoC typically maps its memory in the MIPS
 kseg0 address space, with the following standard memory mapping: 
 
