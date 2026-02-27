@@ -110,6 +110,7 @@ Flash this image with your SPI-programmer on your new chip and solder it in. You
 sobre TFTP
 
 ### https://openwrt.org/docs/guide-user/installation/generic.flashing.tftp.easy-ubuntu
+### https://askubuntu.com/questions/201505/how-do-i-install-and-run-a-tftp-server
 
 falado do uboot e ART
 
