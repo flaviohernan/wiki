@@ -3,6 +3,31 @@ Será usado o rotreador TL-WR720N CPU Atheros AR9331-AL3A
 
 Foi adicionado 32MB de RAM (K4D551638-TC500) e 4MB de flash. A placa original usar 16MB e 2MB.
 
+---
+The Qualcomm Atheros AR9331 SoC typically maps its memory in the MIPS
+kseg0 address space, with the following standard memory mapping: 
+
+    DDR SDRAM (RAM): Starts at 0x80000000 (physical 0x00000000).
+    SPI Flash Memory: Typically mapped to 0x9F000000 (physical 0x1F000000). 
+
+Memory and Address Details
+
+    Address Space: The AR9331 uses a 32-bit architecture where the physical a
+    ddress 0x00000000 is mapped to 0x80000000 in the kernel virtual space (kseg0).
+    Bootloader: U-Boot usually relocates itself to the top of the RAM area.
+    Typical Configuration: The AR9331 is often paired with 64 MB of DDR2 RAM and 
+    16 MB of Flash memory, though some boards use 32 MB RAM or 8 MB Flash.
+    Flash Mapping: The SPI flash, which holds the bootloader and firmware, 
+    is commonly found at 0x9F000000. 
+
+Common Memory Map (Standard 16MB Flash / 64MB RAM)
+
+    Flash (Start): 0x9F000000
+    Flash (End): 0x9FFFFFFF (for 16MB)
+    DDR RAM (Start): 0x80000000
+    DDR RAM (End): 0x83FFFFFF (for 64MB)
+---
+
 ## Comandos
 ```console
 sudo netdiscover -S -f -i enp9s0
