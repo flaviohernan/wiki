@@ -56,5 +56,44 @@ dd if=smaller_image.bin of=full_image.bin conv=notrunc bs=1
 flashrom -p <programmer> -w full_image.bin
 ```
 
+ As far as I know there is no way to tell dd to pad using 0xFF. But there is a workaround.
+First create a file with the required length filled with 0xFF:
+
+$ dd if=/dev/zero ibs=1k count=100 | tr "\000" "\377" >paddedFile.bin
+100+0 records in
+200+0 records out
+102400 bytes (102 kB) copied, 0,0114595 s, 8,9 MB/s
+
+tr is used to replace zeroes with 0xFF. tr expects arguments in octal. 0xFF in octal is \377.
+Result:
+
+$ hexdump -C paddedFile.bin 
+00000000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00019000
+
+Then insert the input file at the beginning of the "padded" file:
+
+$ dd if=inputFile.bin of=paddedFile.bin conv=notrunc
+0+1 records in
+0+1 records out
+8 bytes (8 B) copied, 7,4311e-05 s, 108 kB/s
+
+Note the conv=notrunc which tells dd to not truncate the output file.
+Example input file:
+
+$ hexdump -C inputFile.bin 
+00000000  66 6f 6f 0a 62 61 72 0a                           |foo.bar.|
+00000008
+
+Result:
+
+$ hexdump -C paddedFile.bin 
+00000000  66 6f 6f 0a 62 61 72 0a  ff ff ff ff ff ff ff ff  |foo.bar.........|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00019000
+
 ## Referencias
 ### https://flashrom.org/supported_hw/supported_prog/ch341ab.html
+### https://simple-is-beauty.blogspot.com/2019/11/generating-0xff.html
