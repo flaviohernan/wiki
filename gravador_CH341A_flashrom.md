@@ -57,6 +57,11 @@ truncate -s 16M full_image.bin
 # Copy your smaller image to the beginning of the new file
 dd if=smaller_image.bin of=full_image.bin conv=notrunc bs=1
 ```
+Para criar um arquivo contendo apenas valores 0xFF
+```console
+dd if=/dev/zero ibs=1 count=4194304 | tr "\000" "\377" > paddedFile.bin
+```
+
 
 ```console
 flashrom -p <programmer> -w full_image.bin
