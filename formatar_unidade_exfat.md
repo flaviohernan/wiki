@@ -34,11 +34,11 @@ sudo mkfs -t exfat /dev/sdx1
 ```
 FAT32
 ```console
-sudo mkfs.vfat -F 32 /dev/sdb1
+sudo mkfs.vfat -F 32 /dev/sdx1
 ```
 
 ```console
-
+sudo mkfs.ext4 /dev/sdx1
 ```
 
 ```console
