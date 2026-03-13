@@ -192,4 +192,6 @@ falado do uboot e ART
 ### https://github.com/bkil/calibrated-art-collection/tree/master
 ### https://openwrt.org/toh/gl.inet/64xx
 ### https://github.com/Edragon/openwrt/tree/master/JS9331
+### https://openwrt.org/toh/tp-link/tl-wr841hp_3
+### https://openwrt.org/toh/tp-link/tl-wr842nd
 
