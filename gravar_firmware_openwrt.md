@@ -145,6 +145,18 @@ cat uboot_for_tp-link_tl-wr703n.bin \
 
 Flash this image with your SPI-programmer on your new chip and solder it in. You can now hold the button for 3 seconds (will blink each second) and release to make the bootloader start a httpd at 192.168.1.1.
 
+## Flash Layout
+
+Block size: 64KiB
+
+|   dev:  	|  size (bytes)  	|       name      	|       start      	|        end       	|
+|:-------:	|:--------------:	|:---------------:	|:----------------:	|:----------------:	|
+|  mtd0:  	|  128KiB        	|  “u-boot”       	|  0x000000000000  	|  0x000000020000  	|
+|  mtd1:  	|  8000KiB       	|  “firmware”     	|  0x000000020000  	|  0x0000007f0000  	|
+|  mtd2:  	|  2329225B      	|  “kernel”       	|  0x000000000000  	|  0x000000238a89  	|
+|  mtd3:  	|  5862772B      	|  “rootfs”       	|  0x000000238a8c  	|  0x0000007d0000  	|
+|  mtd4:  	|  2176KiB       	|  “rootfs_data”  	|  0x0000005b0000  	|  0x0000007d0000  	|
+|  mtd5:  	|  64KiB         	|  “art”          	|  0x0000007f0000  	|  0x000000800000  	|
 
 
 
