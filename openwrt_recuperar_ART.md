@@ -13,6 +13,24 @@ mtd7: 00020000 00010000 "fullboot"
 ```
 
 Output TL-WR941ND V3.6
+```console
+root@OpenWrt:/# dmesg
+...
+[    0.592566] m25p80 spi0.0: found w25q32, expected m25p80
+[    0.609229] m25p80 spi0.0: w25q32 (4096 Kbytes)
+[    0.614279] 5 tp-link partitions found on MTD device spi0.0
+[    0.619876] Creating 5 MTD partitions on "spi0.0":
+[    0.624661] 0x000000000000-0x000000020000 : "u-boot"
+[    0.632019] 0x000000020000-0x00000016fbc8 : "kernel"
+[    0.639582] 0x00000016fbc8-0x0000003f0000 : "rootfs"
+[    0.646613] mtd: device 2 (rootfs) set to be root filesystem
+[    0.652313] 1 squashfs-split partitions found on MTD device rootfs
+[    0.658552] 0x0000003a0000-0x0000003f0000 : "rootfs_data"
+[    0.666722] 0x0000003f0000-0x000000400000 : "art"
+[    0.673959] 0x000000020000-0x0000003f0000 : "firmware"
+
+...
+```
 
 ```console
 root@OpenWrt:/# cat /proc/mtd
@@ -27,5 +45,6 @@ mtd5: 003d0000 00010000 "firmware"
 ```console
 dd if=/dev/mtd4 of=/tmp/uboot_factory.bin
 ```
+
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
