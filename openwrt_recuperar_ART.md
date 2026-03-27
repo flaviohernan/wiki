@@ -31,6 +31,7 @@ root@OpenWrt:/# dmesg
 
 ...
 ```
+Listando as partições do roteador
 
 ```console
 root@OpenWrt:/# cat /proc/mtd
@@ -42,9 +43,17 @@ mtd3: 00050000 00010000 "rootfs_data"
 mtd4: 00010000 00010000 "art"
 mtd5: 003d0000 00010000 "firmware"
 ```
+Após localizar as partição identificada com ART, fazer um cópia para a pasta /tmp
+
 ```console
-dd if=/dev/mtd4 of=/tmp/uboot_factory.bin
+dd if=/dev/mtd4 of=/tmp/art.bin
 ```
+Para descobrir o ip do roteador
+```console
+sudo netdiscover -S -f -i enp9s0
+```
+
+Em seguida fazer o backup usando scp
 
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
