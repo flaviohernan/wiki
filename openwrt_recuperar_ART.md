@@ -55,5 +55,8 @@ sudo netdiscover -S -f -i enp9s0
 
 Em seguida fazer o backup usando scp
 
+ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1
+
+
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
