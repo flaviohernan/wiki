@@ -14,13 +14,15 @@ sudo apt-get install flashrom
 ```console
 sudo flashrom -p ch341a_spi
 ```
+Para ler o conteúdo da memória
 
 ```console
-sudo flashrom -p ch341a_spi -r filename.bin
+sudo flashrom -p ch341a_spi -r filename.bin -VVV
 ```
+Para escrever na memória
 
 ```console
-sudo flashrom -p ch341a_spi -w filename.bin
+sudo flashrom -p ch341a_spi -w filename.bin -VVV
 ``` 
 #### Gravar região de memória
 
