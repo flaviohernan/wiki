@@ -31,6 +31,18 @@ root@OpenWrt:/# dmesg
 
 ...
 ```
+
+Para descobrir o ip do roteador
+```console
+sudo netdiscover -S -f -i enp9s0
+```
+
+Em seguida fazer o backup usando scp, executar no PC
+
+```console
+ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1
+```
+
 Listando as partições do roteador
 
 ```console
@@ -55,21 +67,12 @@ dd if=/dev/mtd4 of=/tmp/art.bin
 dd if=/dev/mtd5 of=/tmp/firmware.bin
 ```
 
-Para descobrir o ip do roteador
-```console
-sudo netdiscover -S -f -i enp9s0
-```
 
-Em seguida fazer o backup usando scp, executar no PC
-
-```console
-ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1
-```
 
 Para copiar o arquivo no PC
 
 ```console
-scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/art.bin ./
+scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/*.bin ./
 ```
 
 
