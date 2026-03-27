@@ -43,11 +43,18 @@ mtd3: 00050000 00010000 "rootfs_data"
 mtd4: 00010000 00010000 "art"
 mtd5: 003d0000 00010000 "firmware"
 ```
-Após localizar as partição identificada com ART, fazer um cópia para a pasta /tmp
+Após localizar as partição identificada com **u-boot, art e firmware**, fazer um cópia para a pasta /tmp
 
+```console
+dd if=/dev/mtd0 of=/tmp/uboot.bin
+```
 ```console
 dd if=/dev/mtd4 of=/tmp/art.bin
 ```
+```console
+dd if=/dev/mtd5 of=/tmp/firmware.bin
+```
+
 Para descobrir o ip do roteador
 ```console
 sudo netdiscover -S -f -i enp9s0
