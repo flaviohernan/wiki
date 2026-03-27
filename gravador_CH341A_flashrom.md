@@ -59,11 +59,11 @@ dd if=smaller_image.bin of=full_image.bin conv=notrunc bs=1
 ```
 Para criar um arquivo contendo apenas valores 0xFF
 ```console
-dd if=/dev/zero ibs=1 count=4194304 | tr "\000" "\377" > paddedFile.bin
+dd if=/dev/zero status=progress ibs=1 count=4194304 | tr "\000" "\377" > paddedFile.bin
 ```
 ```console
 # Copy your smaller image to the beginning of the new file
-dd if=smaller_image.bin of=paddedFile.bin conv=notrunc bs=1
+dd if=smaller_image.bin of=paddedFile.bin conv=notrunc bs=1 status=progress
 ```
 
 ```console
