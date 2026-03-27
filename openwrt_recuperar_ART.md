@@ -24,5 +24,8 @@ mtd3: 00050000 00010000 "rootfs_data"
 mtd4: 00010000 00010000 "art"
 mtd5: 003d0000 00010000 "firmware"
 ```
-
+```console
+dd if=/dev/mtd4 of=/tmp/uboot_factory.bin
+```
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
+### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
