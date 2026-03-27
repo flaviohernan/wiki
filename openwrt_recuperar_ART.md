@@ -53,11 +53,18 @@ Para descobrir o ip do roteador
 sudo netdiscover -S -f -i enp9s0
 ```
 
-Em seguida fazer o backup usando scp
+Em seguida fazer o backup usando scp, executar no PC
 
+```console
 ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1
+```
 
-scp -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/art.bin ./
+Para copiar o arquivo no PC
+
+```console
+scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/art.bin ./
+```
+
 
 
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
