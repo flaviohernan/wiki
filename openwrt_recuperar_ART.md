@@ -76,12 +76,20 @@ scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/*.bin ./
 ```
 
 load uboot serial
-
 loady 0x81000000
+
+```console
+tftpboot 0x81000000 u-boot_mod.20151021.tl-wr1043nd.bin
 cp.b 0xbf01fc00 0x8101fc00 0x400
 erase 0xbf000000 +0x20000
 cp.b 0x81000000 0xbf000000 0x20000
+```
+Note that the first "cp.b" copies the 0x400 bytes of mac address, board type and WPS pin so it is not lost.
+Once this is done, you should see this on reboot:
 
+```console
+
+```
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
 
