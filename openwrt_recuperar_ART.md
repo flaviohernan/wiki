@@ -97,7 +97,7 @@ OR
 tftpboot 0x81000000 openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin
 
 erase.b 0xbf020000 +0x3c0000
-cp.b 0x80800000 0xbf020000 0x3c0000
+cp.b 0x81000000 0xbf020000 0x3c0000
 reset
 ```
 
