@@ -74,6 +74,7 @@ Para copiar o arquivo no PC
 ```console
 scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/*.bin ./
 ```
+## update uboot
 
 load uboot serial
 loady 0x81000000
@@ -87,11 +88,24 @@ cp.b 0x81000000 0xbf000000 0x20000
 Note that the first "cp.b" copies the 0x400 bytes of mac address, board type and WPS pin so it is not lost.
 Once this is done, you should see this on reboot:
 
+## update system
 ```console
+setenv serverip 192.168.1.100; setenv ipaddr 192.168.1.1
 
+tftp 0x80800000 openwrt-ar71xx-tl-wr941nd-v3-squashfs.sysupgrade.bin
+OR
+tftpboot 0x81000000 openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin
+
+erase.b 0xbf020000 +0x3c0000
+cp.b 0x80800000 0xbf020000 0x3c0000
+reset
 ```
+
+### https://openwrt.org/pt-br/toh/tp-link/tl-wr941nd
+
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
+
 
 Uboot 
 
