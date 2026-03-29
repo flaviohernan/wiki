@@ -76,11 +76,87 @@ scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/*.bin ./
 ```
 ## update uboot
 
-load uboot serial
+### serial
+
+```console
 loady 0x81000000
+```
+
+no PC usar o **minicom**, com a opção de envio de arquivo usando o **ymodem**
+```console
+Welcome to minicom 2.9
+
+OPTIONS: I18n 
+Port /dev/ttyUSB0, 19:58:41
+
+Press CTRL-A Z for help on sp+-[Upload]--+
+                             | zmodem    |
+                             | ymodem    |
+                             | xmodem    |
+                             | kermit    |
+                             | ascii     |
+                             +-----------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.9 | VT102 | Offline | ttyUSB0                                          
+```
+Na tela seguinte, colocar o caminho completo do arquivo que se deseja enviar.
+:warning: Esse método de envio é bastante lento, logo só é recomendável para arquivos pequenos, tais como **uboot** e **art**.
+
+```console
+Welcome to minicom 2.9+-------------------[Select one or more files for upload]-------------------+
+                      |Directory: /root                                                           |
+OPTIONS: I18n         | [..]                                                                      |
+Port /dev/ttyUSB0, 19:| [.cache]                                                                  |
+                      | [.dbus]                                                                   |
+Press CTRL-A Z for hel| [.launchpadlib]                                                           |
+                      | [.putty]                                                                  |
+                      | [.ssh]                                                                    |
+                      | [snap]                                                                    |
+                      | .bashrc        +-----------------------------------------+                |
+                      | .lesshst       |No file selected - enter filename:       |                |
+                      | .linssid.prefs |>                                        |                |
+                      | .profile       +-----------------------------------------+                |
+                      | .viminfo                                                                  |
+                      | minicom.log                                                               |
+                      |                                                                           |
+                      |                                                                           |
+                      |                                                                           |
+                      |                                                                           |
+                      |                                                                           |
+                      |                                                                           |
+                      |                                                                           |
+                      |              ( Escape to exit, Space to tag )                             |
+                      +---------------------------------------------------------------------------+
+
+                                     [Goto]  [Prev]  [Show]   [Tag]  [Untag] [Okay]                
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.9 | VT102 | Offline | ttyUSB0                                          
+```
+
+### tftp
+
 
 ```console
 tftpboot 0x81000000 u-boot_mod.20151021.tl-wr1043nd.bin
+
+```
+### gravando na memória flash
+
+```console
 cp.b 0xbf01fc00 0x8101fc00 0x400
 erase 0xbf000000 +0x20000
 cp.b 0x81000000 0xbf000000 0x20000
