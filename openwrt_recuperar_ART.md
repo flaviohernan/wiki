@@ -169,11 +169,7 @@ Once this is done, you should see this on reboot:
 ## update system
 ```console
 setenv serverip 192.168.1.100; setenv ipaddr 192.168.1.1
-
-tftp 0x80800000 openwrt-ar71xx-tl-wr941nd-v3-squashfs.sysupgrade.bin
-OR
 tftpboot 0x81000000 openwrt-18.06.9-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin
-
 erase.b 0xbf020000 +0x3c0000
 cp.b 0x81000000 0xbf020000 0x3c0000
 reset
