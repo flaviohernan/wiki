@@ -37,7 +37,7 @@ Para descobrir o ip do roteador
 sudo netdiscover -S -f -i enp9s0
 ```
 
-Em seguida fazer o backup usando scp, executar no PC
+Para acessar o roteador é necessário usar o **ssh**, executar no PC.
 
 ```console
 ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.1.1
