@@ -83,6 +83,7 @@ loady 0x81000000
 ```
 
 no PC usar o **minicom**, com a opção de envio de arquivo usando o **ymodem**
+
 ```console
 Welcome to minicom 2.9
 
@@ -114,6 +115,7 @@ Press CTRL-A Z for help on sp+-[Upload]--+
 CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.9 | VT102 | Offline | ttyUSB0                                          
 ```
 Na tela seguinte, colocar o caminho completo do arquivo que se deseja enviar.
+
 :warning: Esse método de envio é bastante lento, logo só é recomendável para arquivos pequenos, tais como **uboot** e **art**.
 
 ```console
