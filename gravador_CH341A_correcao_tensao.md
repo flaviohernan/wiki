@@ -10,7 +10,7 @@ O gravador CH341a é dispositivo de baixo valor, na internente pode ser encontra
 </div>
 
 <div style="text-align: center;">
-  <img src="./imagens/ch341a_miniprogrammer_sch.png" alt="Centered image" width="50%">
+  <img src="./imagens/ch341a_miniprogrammer_sch.png" alt="Centered image" width="100%">
 </div>
 
 <div style="text-align: center;">
