@@ -5,8 +5,17 @@ O gravador CH341a é dispositivo de baixo valor, na internente pode ser encontra
   <img src="./imagens/ch341a_miniprogrammer.jpeg" alt="Centered image" width="50%">
 </div>
 
+<div style="text-align: center;">
+  <img src="./imagens/ch341a_miniprogrammer_pcb.jpg" alt="Centered image" width="50%">
+</div>
 
+<div style="text-align: center;">
+  <img src="./imagens/ch341a_miniprogrammer_sch.png" alt="Centered image" width="50%">
+</div>
 
+<div style="text-align: center;">
+  <img src="./imagens/ch341a_miniprogrammer_placement.png" alt="Centered image" width="50%">
+</div>
 
 # referencias
 * https://github.com/stahir/CH341-Store/tree/master
