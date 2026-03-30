@@ -2,7 +2,7 @@
 O gravador CH341a é dispositivo de baixo valor, na internente pode ser encontrado pelo nome ***CH341A Mini Programmer*, mas muito ultil para gravar memórias flash e i2c.
 
 <div style="text-align: center;">
-  <img src="./image/ch341a_miniprogrammer.jpeg" alt="Centered image">
+  <img src="./imagens/ch341a_miniprogrammer.jpeg" alt="Centered image" width="50%">
 </div>
 
 
