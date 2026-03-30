@@ -29,3 +29,4 @@ O gravador CH341a é dispositivo de baixo valor, na internente pode ser encontra
 * https://github.com/stahir/CH341-Store/tree/master
 * https://www.onetransistor.eu/2017/08/ch341a-mini-programmer-schematic.html
 * https://github.com/Upcycle-Electronics/CH341A-Pro
+* https://saturn.ffzg.hr/rot13/index.cgi?action=display_html;page_name=ch341a_mini_flash_programmer
