@@ -1,6 +1,10 @@
 # Correção da tensão de operação do gravador CH341A
 O gravador CH341a é dispositivo de baixo valor, na internente pode ser encontrado pelo nome ***CH341A Mini Programmer*, mas muito ultil para gravar memórias flash e i2c.
 
+ Algumas versões possuem um erro de projeto, que podem fazer que a alimentação de 5v passe para os circuitos lógicos que se comunicam com as memórias, flash ou i2c.
+
+ Nesse caso pode-se utilizar um conversor de nível lógico ou realizar uma pequena intervenção na placa.
+
 <div style="text-align: center;">
   <img src="./imagens/ch341a_miniprogrammer.jpeg" alt="Centered image" width="50%">
 </div>
