@@ -204,3 +204,6 @@ Uboot
 ### https://forum.archive.openwrt.org/viewtopic.php?id=43237&p=19
 ### https://github.com/ranma/u-boot_mod/tree/tl-wr1043nd
 ### https://grenville.wordpress.com/2011/11/24/serial-console-tplink-wr1043nd/
+
+binwalk 
+### https://hackaday.io/project/202585-wi-fi-router-autopsy/log/239228-chapter-2-firmware-tour
