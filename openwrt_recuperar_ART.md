@@ -216,3 +216,4 @@ hack
 ### https://openwrt.org/toh/linksys/e2100l
 ### https://openwrt.org/toh/netgear/wnr2000
 ### https://openwrt.org/toh/tp-link/tl-wr841nd
+### https://openwrt.org/toh/tp-link/tl-wr1043nd
