@@ -197,6 +197,7 @@ reset
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
 
+### https://openwrt.org/toh/tp-link/tl-wa901nd
 
 Uboot 
 
