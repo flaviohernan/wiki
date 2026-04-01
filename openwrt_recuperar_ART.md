@@ -11,8 +11,25 @@ mtd5: 00010000 00010000 "board_config"
 mtd6: 00400000 00010000 "fullflash"
 mtd7: 00020000 00010000 "fullboot"
 ```
+## Output TL-WR1043ND
+```console
+    m25p80 spi0.0: s25sl064a (8192 Kbytes)
+    Searching for RedBoot partition table in spi0.0 at offset 0x7e0000
+    Searching for RedBoot partition table in spi0.0 at offset 0x7f0000
+    No RedBoot partition table detected in spi0.0
+    spi0.0: no WRT160NL signature found
+    Creating 5 MTD partitions on "spi0.0":
+    0x000000000000-0x000000020000 : "u-boot"
+    0x000000020000-0x000000160000 : "kernel"
+    0x000000160000-0x0000007f0000 : "rootfs"
+    mtd: partition "rootfs" set to be root filesystem
+    mtd: partition "rootfs_data" created automatically, ofs=2A0000, len=550000
+    0x0000002a0000-0x0000007f0000 : "rootfs_data"
+    0x0000007f0000-0x000000800000 : "art"
+    0x000000020000-0x0000007f0000 : "firmware"
+```
 
-Output TL-WR941ND V3.6
+## Output TL-WR941ND V3.6
 ```console
 root@OpenWrt:/# dmesg
 ...
@@ -185,3 +202,4 @@ Uboot
 
 ### https://forum.archive.openwrt.org/viewtopic.php?id=43237&p=19
 ### https://github.com/ranma/u-boot_mod/tree/tl-wr1043nd
+### https://grenville.wordpress.com/2011/11/24/serial-console-tplink-wr1043nd/
