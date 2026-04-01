@@ -213,3 +213,5 @@ hack
 ### https://github.com/gwlim/Openwrt_Firmware
 ### https://github.com/gwlim/openwrt-sfe-flowoffload-ath79
 ### https://openwrt.org/toh/linksys/wrt160nl
+### https://openwrt.org/toh/linksys/e2100l
+### https://openwrt.org/toh/netgear/wnr2000
