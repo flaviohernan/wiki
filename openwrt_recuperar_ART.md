@@ -193,6 +193,7 @@ reset
 ```
 
 ### https://openwrt.org/pt-br/toh/tp-link/tl-wr941nd
+### https://openwrt.org/toh/tp-link/tl-wr941nd
 
 ### https://openwrt.org/docs/guide-user/installation/restore_art_partition
 ### https://github.com/pepe2k/u-boot_mod?tab=readme-ov-file#building-on-linux
@@ -219,3 +220,9 @@ hack
 ### https://openwrt.org/toh/netgear/wnr2000
 ### https://openwrt.org/toh/tp-link/tl-wr841nd
 ### https://openwrt.org/toh/tp-link/tl-wr1043nd
+
+
+# MODS
+### https://openwrt.org/toh/tp-link/tl-wr703n
+### https://forum.archive.openwrt.org/viewtopic.php?id=28343
+### https://forum.archive.openwrt.org/viewtopic.php?id=32512
