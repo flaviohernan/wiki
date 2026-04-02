@@ -226,3 +226,4 @@ hack
 ### https://openwrt.org/toh/tp-link/tl-wr703n
 ### https://forum.archive.openwrt.org/viewtopic.php?id=28343
 ### https://forum.archive.openwrt.org/viewtopic.php?id=32512
+### https://forum.archive.openwrt.org/viewtopic.php?id=18279
