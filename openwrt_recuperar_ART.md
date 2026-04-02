@@ -210,6 +210,8 @@ hack
 ### https://hackaday.io/project/202585-wi-fi-router-autopsy/log/239228-chapter-2-firmware-tour
 ### https://hackaday.io/project/202585-wi-fi-router-autopsy/log/239494-chapter-3-jtag
 
+### https://forum.archive.openwrt.org/viewtopic.php?id=50765
+
 ### https://github.com/gwlim/Openwrt_Firmware
 ### https://github.com/gwlim/openwrt-sfe-flowoffload-ath79
 ### https://openwrt.org/toh/linksys/wrt160nl
