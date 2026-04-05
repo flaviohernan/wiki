@@ -2,7 +2,7 @@
 
 # Criando chave RSA
 
-# Adicionando no Host
+# Adicionando no cliente ssh
 Verificar se a chave privada foi instalada
 
 ```console
@@ -26,7 +26,10 @@ chmod 600 ~/.ssh/id_ed25519  # Your private key
 chmod 644 ~/.ssh/id_ed25519.pub # Your public key
 ```
 
-# Adicionando no Client
+# Adicionando no Servidor ssh
+
+Verificar se a chave publica, conteúdo do arquivo id_ed25519.pub está listado
+em **~/.ssh/authorized_keys**, caso contrário é necessário copiar para dentro desse arquivo.
 
 # Acessando o computador remoto
 
