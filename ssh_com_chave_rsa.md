@@ -2,6 +2,23 @@
 
 # Criando chave RSA
 
+Abrir o terminal e executar o comando abaixo, substituindo pelo seu e-mail: 
+
+```console
+ssh-keygen -t ed25519 -C "email@exemplo.com"
+```
+Quando for solicitado "Enter a file in which to save the key" colocar o caminho onde 
+o arquivo da chave será salvo.
+
+Após gerar o par de chaves (pública e privada), você deve adicionar a chave pública à sua conta: 
+
+Copie sua chave pública:
+No Linux/Mac: cat ~/.ssh/id_ed25519.pub
+No Windows (Git Bash): cat ~/.ssh/id_ed25519.pub
+
+Copie todo o conteúdo exibido, começando com ssh-ed25519.
+
+
 # Adicionando no cliente ssh
 Verificar se a chave privada foi instalada
 
