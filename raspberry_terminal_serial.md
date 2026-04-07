@@ -8,3 +8,4 @@
 ### https://www.raspberrypi.com/documentation/computers/getting-started.html
 ### https://www.raspberrypi.com/documentation/computers/remote-access.html
 ### https://github.com/raspberrypi/rpi-imager
+### https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c
