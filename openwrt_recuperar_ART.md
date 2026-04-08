@@ -11,6 +11,32 @@ mtd5: 00010000 00010000 "board_config"
 mtd6: 00400000 00010000 "fullflash"
 mtd7: 00020000 00010000 "fullboot"
 ```
+
+
+## Output HLK-RM65
+```console
+    spi-nand spi0.0: Macronix SPI NAND was found.
+    spi-nand spi0.0: 128 MiB, block size: 128 KiB, page size: 2048, OOB size: 64
+    5 fixed-partitions partitions found on MTD device nmbm_spim_nand
+    Creating 5 MTD partitions on "nmbm_spim_nand":
+    0x000000000000-0x000000100000 : "BL2"
+    0x000000100000-0x000000180000 : "u-boot-env"
+    0x000000180000-0x000000380000 : "Factory"
+    0x000000380000-0x000000580000 : "FIP"
+    0x000000580000-0x000004580000 : "ubi"
+```
+
+```console
+root@HiLink:/# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 08000000 00020000 "spi0.0"
+mtd1: 00100000 00020000 "BL2"
+mtd2: 00080000 00020000 "u-boot-env"
+mtd3: 00200000 00020000 "Factory"
+mtd4: 00200000 00020000 "FIP"
+mtd5: 04000000 00020000 "ubi"
+```
+
 ## Output TL-WR1043ND
 ```console
     m25p80 spi0.0: s25sl064a (8192 Kbytes)
