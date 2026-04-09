@@ -11,7 +11,27 @@ mtd5: 00010000 00010000 "board_config"
 mtd6: 00400000 00010000 "fullflash"
 mtd7: 00020000 00010000 "fullboot"
 ```
+## Output WR841N V9.1
+```console
+ CPU0 revision is: 00019374 (MIPS 24Kc)
+ SoC: Qualcomm Atheros QCA9533 ver 1 rev 1
+ m25p80 spi0.0: found w25q32, expected m25p80
+ m25p80 spi0.0: w25q32 (4096 Kbytes)
+ 5 tp-link partitions found on MTD device spi0.0
+ Creating 5 MTD partitions on "spi0.0":
+ 0x000000000000-0x000000020000 : "u-boot"
+ 0x000000020000-0x00000016dde0 : "kernel"
+ 0x00000016dde0-0x0000003f0000 : "rootfs"
+ mtd: device 2 (rootfs) set to be root filesystem
+ 1 squashfs-split partitions found on MTD device rootfs
+ 0x0000003a0000-0x0000003f0000 : "rootfs_data"
+ 0x0000003f0000-0x000000400000 : "art"
+ 0x000000020000-0x0000003f0000 : "firmware"
+ libphy: Fixed MDIO Bus: probed
+ libphy: ag71xx_mdio: probed
+ ag71xx-mdio.1: Found an AR934X built-in switch
 
+```
 
 ## Output HLK-RM65
 ```console
