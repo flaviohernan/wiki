@@ -137,6 +137,13 @@ Para copiar o arquivo no PC
 ```console
 scp -O -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1:/tmp/*.bin ./
 ```
+
+Para ignorar a chave privada
+
+```console
+scp -O -oHostKeyAlgorithms=+ssh-rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@192.168.1.1:/tmp/*.bin ./
+```
+
 ## update uboot
 
 ### serial
