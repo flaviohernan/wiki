@@ -254,6 +254,9 @@ reset
 ### https://openwrt.org/toh/tp-link/tl-wa901nd
 
 ### https://openwrt.org/toh/tp-link/tl-mr3040
+### https://openwrt.org/toh/gl.inet/gl-ar150
+
+
 Uboot 
 
 ### https://forum.archive.openwrt.org/viewtopic.php?id=43237&p=19
@@ -274,7 +277,7 @@ hack
 ### https://openwrt.org/toh/netgear/wnr2000
 ### https://openwrt.org/toh/tp-link/tl-wr841nd
 ### https://openwrt.org/toh/tp-link/tl-wr1043nd
-https://forum.archive.openwrt.org/viewtopic.php?id=32512
+### https://forum.archive.openwrt.org/viewtopic.php?id=32512
 
 # MODS
 ### https://openwrt.org/toh/tp-link/tl-wr703n
