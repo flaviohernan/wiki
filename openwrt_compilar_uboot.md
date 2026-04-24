@@ -23,12 +23,13 @@ tar -xvf OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2.tar
 ```
 
 ```console
-git clone https://github.com/pepe2k/u-boot_mod.git
+
+git clone https://github.com/ranma/u-boot_mod.git
 sudo chown -R user u-boot_mod/
 cd u-boot_mod
-mkdir toolchain
+mkdir-p toolchain
 cp -r ~/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/* ./toolchain/
-
+chmod +x toolchain/bin/*
 ```
 
 
