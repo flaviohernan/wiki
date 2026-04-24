@@ -32,13 +32,16 @@ cp -r ~/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2/tool
 chmod +x toolchain/bin/*
 ```
 
-
 ```console
-
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386
 ```
+acrescentar no Makefile 
 
 ```console
-
+export PATH := /home/user/u-boot_mod/toolchain/bin:$(PATH)
+export CROSS_COMPILE = mips-openwrt-linux-uclibc-
 ```
 
 # Compilando
