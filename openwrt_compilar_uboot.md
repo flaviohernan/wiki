@@ -44,6 +44,10 @@ export PATH := /home/user/u-boot_mod/toolchain/bin:$(PATH)
 export CROSS_COMPILE = mips-openwrt-linux-uclibc-
 ```
 
+```console
+sudo apt install default-jre
+```
+
 # Compilando
 
 ```console
