@@ -15,16 +15,29 @@ docker run -v ~/ubootMod:/home/user -it openwrt_builder /bin/bash
 
 Dentro do container 
 
-```console
-git clone https://github.com/pepe2k/u-boot_mod.git
-sudo chown -R user u-boot_mod/
-cd u-boot_mod
-```
 Baixar o **OpenWrt Toolchain for AR71xx MIPS (32-bit)**
 ```console
 wget http://downloads.openwrt.org/attitude_adjustment/12.09/ar71xx/generic/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2.tar.bz2
 
 tar -xvf OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2.tar.bz2
+```
+
+```console
+git clone https://github.com/pepe2k/u-boot_mod.git
+sudo chown -R user u-boot_mod/
+cd u-boot_mod
+mkdir toolchain
+cp -r ~/OpenWrt-Toolchain-ar71xx-for-mips_r2-gcc-4.6-linaro_uClibc-0.9.33.2/toolchain-mips_r2_gcc-4.6-linaro_uClibc-0.9.33.2/* ./toolchain/
+
+```
+
+
+```console
+
+```
+
+```console
+
 ```
 
 # Compilando
