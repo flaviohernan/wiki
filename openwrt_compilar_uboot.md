@@ -8,7 +8,7 @@ docker build -t openwrt_builder .
 ```
 
 ```console
-mkdir ~/mybuild
+mkdir ~/ubootMod
 chown -R user:user ~/ubootMod
 docker run -v ~/ubootMod:/home/user -it openwrt_builder /bin/bash
 ```
