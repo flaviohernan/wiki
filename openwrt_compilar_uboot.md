@@ -23,6 +23,8 @@ cd u-boot_mod
 Baixar o **OpenWrt Toolchain for AR71xx MIPS (32-bit)**
 ```console
 wget https://downloads.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/OpenWrt-SDK-15.05.1-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2
+
+tar -xvf OpenWrt-SDK-15.05.1-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2
 ```
 
 # Compilando
