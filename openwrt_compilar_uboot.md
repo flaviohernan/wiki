@@ -13,6 +13,14 @@ chown -R 1000:1000 ~/ubootMod
 docker run -v ~/ubootMod:/home/user -it openwrt_builder /bin/bash
 ```
 
+Dentro do container 
+
+```console
+git clone https://github.com/pepe2k/u-boot_mod.git
+sudo chown -R user u-boot_mod/
+cd u-boot_mod
+```
+
 # Compilando
 
 ```console
