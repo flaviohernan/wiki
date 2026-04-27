@@ -45,6 +45,70 @@ export CROSS_COMPILE = mips-openwrt-linux-uclibc-
 ```
 
 ```console
+export BUILD_TOPDIR=$(PWD)
+export STAGING_DIR=$(BUILD_TOPDIR)/tmp
+
+export PATH := /home/user/u-boot_mod2/toolchain/bin:$(PATH)
+
+export CROSS_COMPILE = mips-openwrt-linux-uclibc-
+
+ifndef CROSS_COMPILE
+CROSS_COMPILE = mips-linux-gnu-
+endif
+export CROSS_COMPILE
+
+export MAKECMD=make --silent --no-print-directory ARCH=mips
+
+# export PATH:=$(BUILD_TOPDIR)/toolchain/bin/:$(PATH)
+
+# boot delay (time to autostart boot command)
+export CONFIG_BOOTDELAY=1
+
+```
+
+```console
+
+@@ -1,6 +1,10 @@
+ export BUILD_TOPDIR=$(PWD)
+ export STAGING_DIR=$(BUILD_TOPDIR)/tmp
+ 
++export PATH := /home/user/u-boot_mod2/toolchain/bin:$(PATH)
++
++export CROSS_COMPILE = mips-openwrt-linux-uclibc-
++
+ ifndef CROSS_COMPILE
+ CROSS_COMPILE = mips-linux-gnu-
+ endif
+@@ -8,6 +12,8 @@ export CROSS_COMPILE
+ 
+ export MAKECMD=make --silent --no-print-directory ARCH=mips
+ 
++# export PATH:=$(BUILD_TOPDIR)/toolchain/bin/:$(PATH)
++
+ # boot delay (time to autostart boot command)
+ export CONFIG_BOOTDELAY=1
+
+
+```
+
+
+Modificando makefile **u-boot/Makefile**
+```console
+@@ -338,8 +338,8 @@ wr720n_v3_CH_config : unconfig hornet_common_config
+        @echo "#define GPIO_SYS_LED_BIT                    27" >> include/config.h
+        @echo "#define GPIO_SYS_LED_ON                      0" >> include/config.h
+        @echo "#define GPIO_RST_BUTTON_BIT                 11" >> include/config.h
+-       @echo "#define DEFAULT_FLASH_SIZE_IN_MB             4" >> include/config.h
+-       @echo "#define BOARD_CUSTOM_STRING                  \"AP121 (AR9331) U-Boot for TL-WR720N v3 CH\"" >> include/config.h
++       @echo "#define DEFAULT_FLASH_SIZE_IN_MB            16" >> include/config.h
++       @echo "#define BOARD_CUSTOM_STRING                  \"AP121 (AR9331) U-Boot for TL-WR720N by Flavio Nunes\"" >> include/config.h
+
+        @./mkconfig -a ap121 mips mips ap121 ar7240 ar7240
+
+```
+
+
+```console
 sudo apt install default-jre
 ```
 
