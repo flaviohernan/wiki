@@ -74,6 +74,30 @@ mtd5: 04000000 00020000 "ubi"
     0x0000007f0000-0x000000800000 : "art"
     0x000000020000-0x0000007f0000 : "firmware"
 ```
+## Output TL-WR710N V1
+
+```console
+spi-nor spi0.0: w25q128 (16384 Kbytes)
+3 fixed-partitions partitions found on MTD device spi0.0
+OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+Creating 3 MTD partitions on "spi0.0":
+0x000000000000-0x000000020000 : "u-boot"
+OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+0x000000020000-0x0000007f0000 : "firmware"
+2 tplink-fw partitions found on MTD device firmware
+Creating 2 MTD partitions on "firmware":
+0x000000000000-0x000000287fff : "kernel"
+mtd: partition "kernel" doesn't end on an erase/write block -- force read-only
+0x000000288000-0x0000007d0000 : "rootfs"
+mtd: setting mtd3 (rootfs) as root device
+1 squashfs-split partitions found on MTD device rootfs
+0x000000660000-0x0000007d0000 : "rootfs_data"
+0x0000007f0000-0x000000800000 : "art"
+
+```
+
+
 
 ## Output TL-WR941ND V3.6
 ```console
