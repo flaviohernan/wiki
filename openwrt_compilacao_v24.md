@@ -32,22 +32,41 @@ cd openwrt
 ```
 
 
+## comandos docker
+
+
+
 ```console
+
+docker exec -it <container_id_or_name> bash
+
+```
+
+```console
+docker attach <container_id_or_name>
+
+
+```
+
+```console
+docker run -it <image_name> /bin/bash
 
 
 ```
 
 ```console
 
+To leave and keep the container running (Detach):
+If you used docker run -it or docker attach, use the escape sequence:
+Ctrl + P then Ctrl + Q
+Note: This only works if the container was started with interactive (-i) and tty (-t) flags.
 
-```
+To leave and stop the container:
+If you are in the container's main process (PID 1):
+Type exit or press Ctrl + D.
 
-```console
-
-
-```
-
-```console
+To leave a docker exec session:
+Type exit or press Ctrl + D. This will return you to your host terminal without stopping the container. 
 
 
 ```
