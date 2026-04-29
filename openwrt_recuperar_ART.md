@@ -268,7 +268,7 @@ cp.b 0x81000000 0xbf020000 0x3c0000
 reset
 ```
 
-# Gravando ART na memória flash
+# Gravando ART (Atheros Radio Test) na memória flash
 Usando o menu do **uboot**
 
 ```console
