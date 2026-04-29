@@ -268,28 +268,27 @@ cp.b 0x81000000 0xbf020000 0x3c0000
 reset
 ```
 
-## Gravando ART na memória flash
-
+# Gravando ART na memória flash
+Usando o menu do **uboot**
 
 ```console
 setenv serverip 192.168.1.100
 setenv ipaddr 192.168.1.1
 tftpboot 0x81000000 ar9331_art.bin
 ```
-
-#### Flash 8MB
+## AR9331
+### Flash 8MB
 
 ```console
 erase 0x9f7f0000 +0x10000
 cp.b 0x81000000 0x9f7f0000 0x10000
 ```
 
-#### Flash 16MB
-
+### Flash 16MB
 
 ```console
-erase 0x9f7f0000 +0x10000
-cp.b 0x81000000 0x9f7f0000 0x10000
+erase 0x9fff0000 +0x10000
+cp.b 0x81000000 0x9fff0000 0x10000
 ```
 
 
