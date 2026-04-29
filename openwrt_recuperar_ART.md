@@ -250,7 +250,6 @@ CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.9 | VT102 | Offline | ttyUSB0
 tftpboot 0x81000000 u-boot_mod.20151021.tl-wr1043nd.bin
 
 ```
-### gravando na memória flash
 
 ```console
 cp.b 0xbf01fc00 0x8101fc00 0x400
@@ -268,6 +267,31 @@ erase.b 0xbf020000 +0x3c0000
 cp.b 0x81000000 0xbf020000 0x3c0000
 reset
 ```
+
+## Gravando ART na memória flash
+
+
+```console
+setenv serverip 192.168.1.100
+setenv ipaddr 192.168.1.1
+tftpboot 0x81000000 ar9331_art.bin
+```
+
+#### Flash 8MB
+
+```console
+erase 0x9f7f0000 +0x10000
+cp.b 0x81000000 0x9f7f0000 0x10000
+```
+
+#### Flash 16MB
+
+
+```console
+erase 0x9f7f0000 +0x10000
+cp.b 0x81000000 0x9f7f0000 0x10000
+```
+
 
 ### https://openwrt.org/pt-br/toh/tp-link/tl-wr941nd
 ### https://openwrt.org/toh/tp-link/tl-wr941nd
