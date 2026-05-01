@@ -75,6 +75,16 @@ partition@ff0000 {
 
 
 ## Alterar o Makefile do Target
+
+O OpenWrt limita o tamanho da imagem final para evitar erros. 
+Para o WR710N, precisamos avisar ao compilador que agora ele tem 16MB.
+Edite o arquivo de definições de imagem:
+
+```console
+nano target/linux/ath79/image/tiny.mk
+
+```
+
 ## Sincronizar o U-Boot
 ## Como compilar corretamente (Comando)
   
@@ -103,6 +113,27 @@ partition@ff0000 {
 ```console
 
 ```
+
+## Resumo dos passos
+1. Preparação do Ambiente
+   * Executar ./scripts/feeds update -a && ./scripts/feeds install -a
+   * Ter o backup da sua partição ART de 64KB salvo.
+2. Modificação dos Arquivos de Imagem (Ajuste de Limite)
+   * Editar o arquivo target/linux/ath79/image/tiny.mk (ou generic.mk).
+   * Localizar Device/tplink_tl-wr710n-v1 e alterar:IMAGE_SIZE := 15872k
+3. Modificação do Layout de Memória (DTS)
+   * Editar o arquivo target/linux/ath79/dts/ar9331_tplink_tl-wr710n-v1.dts
+   * Ajustar a partição firmware: reg = <0x020000 0xfd0000>;
+   * Ajustar a partição art: reg = <0xff0000 0x010000>;
+4. Configuração do Firmware (Menuconfig)
+   * Rodar make menuconfig.
+   * Selecionar Target System (Atheros AR7xxx/AR9xxx) e Target Profile (TP-Link TL-WR710N v1).
+   * Ir em Target Images -> Root filesystem partition size (in MB) -> Definir como 14.
+   * Selecionar o LuCI (Interface Web) se desejar: LuCI -> Collections -> luci.
+   * Salvar e Sair.
+5. Validação e Compilação
+   * Executar make defconfig (para validar as dependências e o novo tamanho).
+   * Executar make -j$(nproc) V=s.
 
 
 ## Referencia
