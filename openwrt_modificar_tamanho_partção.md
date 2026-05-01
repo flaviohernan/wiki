@@ -81,8 +81,33 @@ Para o WR710N, precisamos avisar ao compilador que agora ele tem 16MB.
 Edite o arquivo de definições de imagem:
 
 ```console
-nano target/linux/ath79/image/tiny.mk
+vi target/linux/ath79/image/generic-tp-link.mk
+```
+* De: $(Device/tplink-8mlzma) Para: $(Device/tplink-16mlzma)
+* E garanta que a linha IMAGE_SIZE := 15872k esteja logo abaixo.
 
+```console
+define Device/tplink_tl-wr710n-v1
+  $(Device/tplink-16mlzma)
+  SOC := ar9331
+  DEVICE_MODEL := TL-WR710N
+  DEVICE_VARIANT := v1
+  DEVICE_PACKAGES := kmod-usb-chipidea2 kmod-usb-ledtrig-usbport
+  TPLINK_HWID := 0x07100001
+  IMAGE_SIZE := 15872k
+  SUPPORTED_DEVICES += tl-wr710n
+  DEFAULT := n
+endef
+TARGET_DEVICES += tplink_tl-wr710n-v1
+```
+
+Recomendação é de limmpar os arquivos temporários caso ocorra erro de tamanho do binario final.
+```console
+rm -rf bin/targets/ath79/generic/
+```
+
+```console
+make target/linux/compile
 ```
 
 ## Sincronizar o U-Boot
