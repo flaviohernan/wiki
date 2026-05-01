@@ -15,7 +15,7 @@ Para localizar o arquivo **DTS**
 ```console
 find target/linux/ath79/dts/ -name "*wr710n-v1*"
 ```
-Abrir o arquivo .dts e procurar a seção **partitions@0**
+Abrir o arquivo .dts e procurar a seção **partitions@0**, abaixo é um exemplo
 ```console
 partition@0 {
     label = "u-boot";
@@ -35,8 +35,32 @@ partition@7f0000 {
 };
 
 ```
+### Modificar para 16MB
 
+Como deve ficar para 16MB:
+* u-boot: Mantém o mesmo (0x000000 a 0x020000).
+* firmware: Vai começar em 0x020000 e terá o tamanho de 0xfd0000 (isso cobre até quase o fim dos 16MB).
+* art: Deve ser movida para o endereço 0xff0000 (os últimos 64KB do chip).
+
+O arquivo deve ficar com as seguintes alterações:
 ```console
+partition@0 {
+    label = "u-boot";
+    reg = <0x000000 0x020000>;
+    read-only;
+};
+
+partition@20000 {
+    label = "firmware";
+    reg = <0x020000 0xfd0000>; // Expandido para 16MB (quase 15.8MB)
+};
+
+partition@ff0000 {
+    label = "art";
+    reg = <0xff0000 0x010000>; // Movido para o final real do chip de 16MB
+    read-only;
+};
+
 ```
 
 ```console
