@@ -159,9 +159,10 @@ make target/linux/compile
 5. Validação e Compilação
    * Executar make defconfig (para validar as dependências e o novo tamanho).
    * Executar make -j$(nproc) V=s.
-  
+
+## Resumo2
 1. Modificação do Perfil de Hardware (.mk)
-   No arquivo target/linux/ath79/image/generic-tp-link.mk:
+   * No arquivo target/linux/ath79/image/generic-tp-link.mk:
    * Alterar o pai do dispositivo para $(Device/tplink-16mlzma).
    * Garantir a linha IMAGE_SIZE := 15872k.
    * Isso permite gerar o arquivo de 16.252.928 bytes.
