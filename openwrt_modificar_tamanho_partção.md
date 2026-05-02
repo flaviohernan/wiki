@@ -159,6 +159,28 @@ make target/linux/compile
 5. Validação e Compilação
    * Executar make defconfig (para validar as dependências e o novo tamanho).
    * Executar make -j$(nproc) V=s.
+  
+1. Modificação do Perfil de Hardware (.mk)
+   No arquivo target/linux/ath79/image/generic-tp-link.mk:
+   * Alterar o pai do dispositivo para $(Device/tplink-16mlzma).
+   * Garantir a linha IMAGE_SIZE := 15872k.
+   * Isso permite gerar o arquivo de 16.252.928 bytes.
+2. Modificação do Layout de Memória (.dts)
+   * No arquivo target/linux/ath79/dts/ar9331_tplink_tl-wr710n-v1.dts:
+   * Redefinir a partição firmware para reg = <0x020000 0xfd0000>;
+   * Mover a partição art para o final do chip: reg = <0xff0000 0x010000>;
+   * Isso garante que o kernel encontre o Wi-Fi e o espaço extra do overlay.
+3. Compilação
+   * make menuconfig -> Target Images -> Root partition size: 14 (ou deixar o padrão, já que o DTS agora manda).
+   * make defconfig -> Para validar as mudanças.
+   * make -j$(nproc) V=s -> Gerou o arquivo correto de ~16MB.
+4. Instalação 
+   * Entrar no U-Boot/Breed: Ligue o roteador segurando o botão reset.
+   * Backup/ART: Certifique-se de que seus dados de ART (64KB) foram gravados no final do chip físico (endereço 0xFF0000).
+   * Flash: Envie o arquivo openwrt-ath79-...-factory.bin de 16MB via interface web do U-Boot/Breed.
+   * Verificação:
+   *    df -h: Verifique se o overlay tem ~12MB livres.
+   *    wifi up: Teste se o rádio liga (confirmação do ART)
 
 
 ## Referencia
