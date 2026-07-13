@@ -63,9 +63,13 @@ scp -O -oHostKeyAlgorithms=+ssh-rsa ./openwrt-23.05.0-ath79-tplink_eap225-outdoo
 
 ```
 
-
-
 ** No roteador
 ```console
 sysupgrade -F /tmp/openwrt-23.05.0-ath79-tplink_eap225-outdoor-v3factory.bin
 ```
+
+## Referencia
+
+### https://forum.openwrt.org/t/bricked-eap225-wall-trying-to-flash-back-to-original-firmware/143061/25?page=2
+
+### https://github.com/abusse/openwrt-eap225-outdoor
