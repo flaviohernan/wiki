@@ -77,6 +77,11 @@ FAT32
 ```console
 sudo mkfs.vfat -F 32 /dev/sdx1
 ```
+NTFS
+```console
+sudo mkfs.ntfs -L "MyDisk" /dev/sdx1
+```
+
 
 ```console
 sudo mkfs.ext4 /dev/sdx1
